@@ -23,7 +23,7 @@ public class BulletMovement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.SetActive(false); //Making bullet to inactive and back to pool
-            print("bullet is made inactive");
+            print("bullet is made inactive");       //Print statement
            
         }
     }
