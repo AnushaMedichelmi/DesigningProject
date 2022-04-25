@@ -7,9 +7,10 @@ public class BulletMovement : MonoBehaviour
     // Start is called before the first frame update
 
     public int bulletSpeed;
+    ParticleSystem particle;
     void Start()
     {
-        
+        particle = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -22,8 +23,14 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.SetActive(false); //Making bullet to inactive and back to pool
-            print("bullet is made inactive");       //Print statement
+            collision.gameObject.SetActive(false);   // //Making bullet to inactive and back to pool
+            print("bullet is made inactive");       //  //Print statement
+
+           
+
+            GameObject effect = Instantiate(particle, Hit.transform.position, Quaternion.identity);
+            Destroy(effect,1f);
+             
            
         }
     }

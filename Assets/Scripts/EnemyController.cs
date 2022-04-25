@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
             case STATE.CHASE:
                 TurnOffAllAnim();
                 animator.SetBool("isRunning", true);
-                audioSources.Play();
+               // audioSources.Play();
                 agent.SetDestination(target.transform.position);
                 agent.stoppingDistance = 3f;
                 print("running");
