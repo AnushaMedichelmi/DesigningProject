@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] weapons;
     AudioSource audioSource;
 
+    public Transform spawnPoint;
+    public GameObject bullet;
+
 
 
 
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour
         colliders = GetComponent<CapsuleCollider>();
         //spawnManager = GameObject.Find("SpawnPosition").GetComponent<SpawnManager>();
         audioSource = GetComponent<AudioSource>();
+       spawnPoint = GetComponent<Transform>();
        // weapons = GetComponent<GameObject[]>();
        // weapons[0].SetActive(false);
       //  weapons[0].SetActive(false);
@@ -56,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
             { 
                 animator.SetBool("isShoot", !animator.GetBool("isShoot"));
+                Instantiate(bullet,spawnPoint.transform.position, Quaternion.identity);
                 audioSource.Play();
 
               //  HitEnemy();
