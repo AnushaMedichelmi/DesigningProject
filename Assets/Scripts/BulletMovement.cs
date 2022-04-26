@@ -8,20 +8,36 @@ public class BulletMovement : MonoBehaviour
 
     public int bulletSpeed;
     ParticleSystem particle;
-   
-   
+    Rigidbody rb;
+   // public GameObject bullet;
+    //public GameObject tempBullet;
+
+
     void Start()
     {
         particle = GetComponent<ParticleSystem>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-bulletSpeed * Time.deltaTime, 0f, 0f);
-       
-               
-            }
+        // transform.Translate(-bulletSpeed * Time.deltaTime, 0f, 0f);
+        // rb.AddForce(transform.forward*bulletSpeed);
+
+       // if (Input.GetKeyDown(KeyCode.Space))
+        //{
+           // GameObject tempBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            //tempBullet.transform.position = transform.position;
+            //  Camera camera=GetComponentInChildren<Camera>();
+            GetComponent<Rigidbody>().velocity = Camera.main.transform.rotation * Vector3.forward * bulletSpeed;
+
+
+        //}
+
+
+
+    }
 
 
 

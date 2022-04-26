@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         colliders = GetComponent<CapsuleCollider>();
         //spawnManager = GameObject.Find("SpawnPosition").GetComponent<SpawnManager>();
         audioSource = GetComponent<AudioSource>();
-       spawnPoint = GetComponent<Transform>();
+       //spawnPoint = GetComponent<Transform>();
        // weapons = GetComponent<GameObject[]>();
        // weapons[0].SetActive(false);
       //  weapons[0].SetActive(false);
