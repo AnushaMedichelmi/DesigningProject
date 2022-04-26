@@ -7,15 +7,15 @@ public class BulletMovement : MonoBehaviour
     // Start is called before the first frame update
 
     public int bulletSpeed;
-    ParticleSystem particle;
+   
     Rigidbody rb;
-   // public GameObject bullet;
-    //public GameObject tempBullet;
+  
+
 
 
     void Start()
     {
-        particle = GetComponent<ParticleSystem>();
+       // particle = GetComponent<ParticleSystem>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,16 +25,8 @@ public class BulletMovement : MonoBehaviour
         // transform.Translate(-bulletSpeed * Time.deltaTime, 0f, 0f);
         // rb.AddForce(transform.forward*bulletSpeed);
 
-       // if (Input.GetKeyDown(KeyCode.Space))
-        //{
-           // GameObject tempBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-            //tempBullet.transform.position = transform.position;
-            //  Camera camera=GetComponentInChildren<Camera>();
+      
             GetComponent<Rigidbody>().velocity = Camera.main.transform.rotation * Vector3.forward * bulletSpeed;
-
-
-        //}
-
 
 
     }

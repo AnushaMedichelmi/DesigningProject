@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public Transform spawnPoint;
     public GameObject bullet;
 
+    public GameObject effect;
+
 
 
 
@@ -40,11 +42,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         colliders = GetComponent<CapsuleCollider>();
         //spawnManager = GameObject.Find("SpawnPosition").GetComponent<SpawnManager>();
-        audioSource = GetComponent<AudioSource>();
-       //spawnPoint = GetComponent<Transform>();
-       // weapons = GetComponent<GameObject[]>();
-       // weapons[0].SetActive(false);
-      //  weapons[0].SetActive(false);
+      
     }
     // Update is called once per frame
     void Update()
@@ -61,6 +59,7 @@ public class PlayerController : MonoBehaviour
             { 
                 animator.SetBool("isShoot", !animator.GetBool("isShoot"));
                 Instantiate(bullet,spawnPoint.transform.position, Quaternion.identity);
+                Instantiate(effect,spawnPoint.transform.position,Quaternion.identity);
                // audioSource.Play();
 
               //  HitEnemy();
@@ -69,17 +68,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-       /* if (Input.GetKeyDown(KeyCode.K))
-        {
-            weapons[0].SetActive(false);
-            weapons[1].SetActive(true);
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            weapons[0].SetActive(true);
-            weapons[1].SetActive(false);
-        }*/
+     
 
 
 

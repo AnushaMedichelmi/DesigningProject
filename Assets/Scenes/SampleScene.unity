@@ -843,6 +843,7 @@ MonoBehaviour:
   weapons: []
   spawnPoint: {fileID: 718627742}
   bullet: {fileID: 6579316500266126792, guid: 05fa43bcd9005634cb1c4de2630641c3, type: 3}
+  effect: {fileID: 100006, guid: 973eb0a45c837fd46993e1f277f5dacf, type: 3}
 --- !u!1001 &1256728703
 PrefabInstance:
   m_ObjectHideFlags: 0
