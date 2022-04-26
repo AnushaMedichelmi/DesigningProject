@@ -8,6 +8,8 @@ public class BulletMovement : MonoBehaviour
 
     public int bulletSpeed;
     ParticleSystem particle;
+   
+   
     void Start()
     {
         particle = GetComponent<ParticleSystem>();
@@ -17,21 +19,31 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(-bulletSpeed * Time.deltaTime, 0f, 0f);
-    }
+       
+               
+            }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+
+
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.SetActive(false);   // //Making bullet to inactive and back to pool
-            print("bullet is made inactive");       //  //Print statement
+           gameObject.SetActive(false);   // //Making bullet to inactive and back to pool
+            print("bullet is made inactive");         //Print statement
+            Destroy(collision.gameObject);
 
-           
 
-            GameObject effect = Instantiate(particle, Hit.transform.position, Quaternion.identity);
-            Destroy(effect,1f);
-             
-           
+
+
+
+            // GameObject effect = Instantiate(particle, Hit.transform.position, Quaternion.identity);
+            //  Destroy(effect,1f);
+
+
         }
     }
-}
+    
+        }
+    
+

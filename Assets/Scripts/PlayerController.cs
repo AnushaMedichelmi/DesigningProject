@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
             { 
                 animator.SetBool("isShoot", !animator.GetBool("isShoot"));
                 Instantiate(bullet,spawnPoint.transform.position, Quaternion.identity);
-                audioSource.Play();
+               // audioSource.Play();
 
               //  HitEnemy();
 

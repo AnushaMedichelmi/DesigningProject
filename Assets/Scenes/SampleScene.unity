@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &718627739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813312303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0299997, y: 2.6999998, z: -5.1000004}
+  m_LocalPosition: {x: -3.491, y: 2.6999998, z: -4.844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 1256728704}
-  number: 10
+  number: 5
   spawnRadius: 1
   spawnOnStart: 1
   enemies: []
@@ -841,7 +841,7 @@ MonoBehaviour:
   cam: {fileID: 963194227}
   animator: {fileID: 1658058771}
   weapons: []
-  spawnPoint: {fileID: 1778989010}
+  spawnPoint: {fileID: 718627742}
   bullet: {fileID: 6579316500266126792, guid: 05fa43bcd9005634cb1c4de2630641c3, type: 3}
 --- !u!1001 &1256728703
 PrefabInstance:
@@ -980,6 +980,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1256728708
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256728704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1323256823
 PrefabInstance:
   m_ObjectHideFlags: 0
