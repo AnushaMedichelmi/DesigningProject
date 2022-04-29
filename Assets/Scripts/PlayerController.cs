@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     //SpawnManager spawnManager;
 
-    public GameObject[] weapons;
+   // public GameObject[] weapons;
     AudioSource audioSource;
 
     public Transform spawnPoint;
